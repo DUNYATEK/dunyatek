@@ -1,1 +1,40 @@
 node_modules/
+
+# Python virtualenv
+.venv/
+
+# Secrets and configs
+secrets
+secrets.json
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Frontend build outputs
+frontend/dist/
+
+# Backend outputs and generated files
+backend/output/
+backend/exports/
+backend/images/
+backend/previews/
+backend/matrices/
+
+# Backend environment
+backend/.env
+
+# Local SQLite DB
+backend/**/*.db
+backend/**/*.sqlite
+
+# Logs and temp
+*.log
+*.tmp
+*.bak
+*.tar.gz
+*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
