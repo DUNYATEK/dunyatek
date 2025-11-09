@@ -29,11 +29,12 @@ export default function App() {
     };
   },[]);
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="navbar">
         <div className="navbar-inner">
           <div className="nav-brand" style={{ display:'flex', alignItems:'center', gap:10 }}>
-            <img src="/dunyatek-logo.png" alt="Dunyatek" style={{ width:30, height:30, objectFit:'contain' }} />
+            {(()=>{ const logo = new URL('/dunyatek-logo.png', import.meta.env.BASE_URL).toString();
+              return <img src={logo} alt="Dunyatek" style={{ width:30, height:30, objectFit:'contain' }} />; })()}
             <span style={{ fontWeight:700 }}>Desen Üretim Yazılımı</span>
           </div>
           <div className="nav-links">
